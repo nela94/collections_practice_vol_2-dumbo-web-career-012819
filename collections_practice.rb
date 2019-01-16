@@ -10,6 +10,10 @@ end
 def remove_non_strings(array)
   array.delete_if { |obj| !(obj.is_a? String) }
 end
-def count_elements(array)
-  array.count {|name| name > 0}
+def count_elements(counts)
+  counts = Hash.new 0
+
+  words.each do |word|
+    counts[word] += 1
+  end
 end
